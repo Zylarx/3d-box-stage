@@ -88,6 +88,7 @@ def get3DBoxCenter(dim, pos , orient,camMatrix,orientGlobal):
             A[i] =  camMatrix[indice[i],:3] - box2d[i]* camMatrix[2,:3]
             B[i] =  box2d[i]*vectHomo[2]-vectHomo[indice[i]]
 
+           #On applique la régression lineaire
         loc, error, rank, s = np.linalg.lstsq(A[:4], B[:4], rcond=None)
 
 
