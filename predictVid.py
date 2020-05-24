@@ -8,7 +8,7 @@ import utils
 import utilsImage
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-import yolo
+from Yolo import Yolo
 import VideoData as vd
 
 
@@ -33,6 +33,8 @@ dimension_model.model.load_weights("model/dimension_epoch_25.h5")
 orientation_model.model.load_weights("model/orientation_epoch_25.h5")
 base_model = VGG19(weights='imagenet',include_top =False)
 
+#Chargement du modéle yolo
+yolo_model = Yolo()
 
 img_array = []
 img_array_fig = []
@@ -49,7 +51,7 @@ for img,file,truthCars in vidData:
     ax.set_ylim([0, 40])
     #Détection des voitures par YOLO
     size = (img.shape[1],img.shape[0])
-    cars = yolo.getDetectedCars(img)
+    cars = yolo_model.getDetectedCars(img)
 
     #On affiche toutes les voitures labélisées sur notre graphe 2d
     for trueCars in truthCars:
