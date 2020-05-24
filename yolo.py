@@ -4,7 +4,7 @@ import os
 
 CONF = 0.5
 
-
+## Fonction qui introduit un model yolo 
 def getDetectedCars(image):
     H  = image.shape[0]
     W  = image.shape[1]
@@ -25,9 +25,9 @@ def getDetectedCars(image):
     layerOutputs = net.forward(ln)
 
     cars = []
-    # loop over each of the layer outputs
+    
     for output in layerOutputs:
-    	# loop over each of the detections
+    	# On regarde tout les objets détéctés
     	for detection in output:
             scores = detection[5:]
             classID = np.argmax(scores)
