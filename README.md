@@ -4,6 +4,6 @@ Il s'agit du code concérnant le stage de fin de L3 concérnant la de detection 
 
 Vous pouvez voir quelques resultat ici : https://youtu.be/Uyreju14NWI
 
-Concérnant les modéles qui on été entrainés, vous pouvez les retrouvés ici en telechargement :
+Concérnant les modéles qui on été entrainés, vous pouvez les retrouvés ici en telechargement : https://drive.google.com/drive/folders/1Sk1d9PgTPEjcheYidqt-w81nd_uHZ-vi?usp=sharing
 
 Il faut les placer dans un dossier model.
