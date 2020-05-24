@@ -4,7 +4,7 @@ import os
 
 CONF = 0.5
 
-## Fonction qui introduit un model yolo 
+## Fonction qui introduit un modèle yolo 
 def getDetectedCars(image):
     H  = image.shape[0]
     W  = image.shape[1]
